@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dosya Transfer</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        .screen { display: none; }
+        .screen.active { display: block; }
+    </style>
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- Odaya Katılma Ekranı -->
+        <div class="screen join-screen active">
+            <div class="form">
+                <h2>Dosyalarını Paylaş</h2>
+                <div class="form-input">
+                    <label for="join-id">Join ID</label>
+                    <input type="text" id="join-id">
+                </div>
+                <div class="form-input">
+                    <button id="receiver-start-con-btn">Odaya katıl</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dosya Paylaşım Ekranı -->
+        <div class="screen fs-screen">
+            <div class="files-list">
+                <div class="title">Paylaşılan dosyalar:</div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/downloadjs/1.4.1/download.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="receiver.js"></script>
+
+</body>
+
+</html>
